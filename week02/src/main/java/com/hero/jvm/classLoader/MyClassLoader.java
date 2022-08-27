@@ -25,7 +25,7 @@ public class MyClassLoader extends ClassLoader{
         String path = classPath + File.separator + className.replace(".", File.separator) + ".class";
         try (InputStream in = Files.newInputStream(Paths.get(path)); ByteArrayOutputStream out = new ByteArrayOutputStream();){
             byte [] buffer = new byte[1024];
-            int len =0;
+            int len;
             while ((len = in.read(buffer)) != -1) {
                 out.write(buffer, 0, len);
             }
