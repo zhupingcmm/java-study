@@ -7,13 +7,19 @@ import java.lang.reflect.Proxy;
 public class JdkProxy {
 
     public Object createObject(Class<?> clazz) {
+        // 返回代理对象
         return Proxy.newProxyInstance(clazz.getClassLoader(), clazz.getInterfaces(), new JdkInvocationHandler(clazz));
     }
 
+    /**
+     * 实现InvocationHandler接口
+     * 调用invoke方法
+     */
     public static class JdkInvocationHandler implements InvocationHandler{
         private Class<?> clazz;
 
         public JdkInvocationHandler(Class<?> clazz){
+            //目标对象赋值
             this.clazz = clazz;
         }
 

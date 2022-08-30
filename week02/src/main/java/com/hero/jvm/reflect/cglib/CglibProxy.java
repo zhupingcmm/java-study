@@ -12,8 +12,11 @@ public class CglibProxy implements MethodInterceptor {
     public <T> T getProxy(Class<?> clazz){
         this.clazz = clazz;
         Enhancer enhancer = new Enhancer();
+        // 执行父类，cglib是通过指定类生成一个子类，所以需要指定父类
         enhancer.setSuperclass(clazz);
+        // 设置回调
         enhancer.setCallback(this);
+        // 创建代理对象并返回
         return (T) enhancer.create();
     }
     @Override
