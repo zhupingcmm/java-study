@@ -16,6 +16,7 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <jol.version>0.9</jol.version>
+        <cglib.version>3.3.0</cglib.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -23,6 +24,11 @@
                 <groupId>org.openjdk.jol</groupId>
                 <artifactId>jol-core</artifactId>
                 <version>${jol.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cglib</groupId>
+                <artifactId>cglib</artifactId>
+                <version>${cglib.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

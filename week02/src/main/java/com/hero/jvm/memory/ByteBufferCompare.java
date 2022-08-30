@@ -8,6 +8,7 @@ public class ByteBufferCompare {
     public static void allocateCompare() {
         long start = System.currentTimeMillis();
         for (int i = 0; i < TIME; i++) {
+            //申请堆内存
             ByteBuffer.allocate(2);
         }
         long end = System.currentTimeMillis();
@@ -16,6 +17,7 @@ public class ByteBufferCompare {
 
         start = System.currentTimeMillis();
         for (int i = 0; i < TIME; i++) {
+            //申请直接内存
             ByteBuffer.allocateDirect(2);
         }
         end = System.currentTimeMillis();
@@ -24,6 +26,7 @@ public class ByteBufferCompare {
     }
 
     public static void operatorCompare() {
+        //申请堆内存
         ByteBuffer byteBuffer = ByteBuffer.allocate(2 * TIME);
         long start = System.currentTimeMillis();
 
@@ -45,7 +48,6 @@ public class ByteBufferCompare {
         for (int i = 0; i < TIME; i++) {
             byteBuffer.putChar('a');
         }
-
         byteBuffer.flip();
 
         for (int i = 0; i < TIME; i++) {
