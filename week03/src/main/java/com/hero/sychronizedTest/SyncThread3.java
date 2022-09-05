@@ -2,6 +2,9 @@ package com.hero.sychronizedTest;
 
 import java.util.concurrent.CountDownLatch;
 
+/**
+ * 同步代码块： 锁的是括号里面的对象
+ */
 public class SyncThread3 {
     Object lock = new Object();
     private volatile static int count = 0;

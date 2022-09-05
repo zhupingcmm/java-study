@@ -2,6 +2,9 @@ package com.hero.sychronizedTest;
 
 import java.util.concurrent.CountDownLatch;
 
+/**
+ * 普通方法： 锁的是实例对象
+ */
 public class SyncThread2 {
     private volatile int count =0;
     public synchronized void increment() {count ++;}
