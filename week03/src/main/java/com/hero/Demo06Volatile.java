@@ -22,7 +22,7 @@ public class Demo06Volatile {
            countDownLatch.countDown();
         }
 
-//        Thread.sleep(1000);
+        Thread.sleep(1000);
         System.out.println("count = "+demo.count);
     }
 
