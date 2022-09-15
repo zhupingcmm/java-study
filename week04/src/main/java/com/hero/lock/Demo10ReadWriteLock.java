@@ -1,7 +1,6 @@
 package com.hero.lock;
 
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class Demo10ReadWriteLock {
@@ -15,7 +14,7 @@ public class Demo10ReadWriteLock {
             new Thread(writeDemo).start();
         }
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 3; i++) {
             new Thread(readDemo).start();
         }
 
