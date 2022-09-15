@@ -11,6 +11,7 @@
     <modules>
         <module>week02</module>
         <module>week03</module>
+        <module>week04</module>
     </modules>
 
     <properties>
