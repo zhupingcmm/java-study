@@ -11,6 +11,7 @@ public class Demo23FutureTask {
         executorService.submit(futureTask);
         System.out.println("task result::" + futureTask.get());
 
+        System.out.println("=======");
         executorService.shutdown();
 
     }
