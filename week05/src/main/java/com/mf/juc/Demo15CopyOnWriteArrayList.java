@@ -25,7 +25,7 @@ public class Demo15CopyOnWriteArrayList {
 
 
         TimeUnit.SECONDS.sleep(2);
-        System.out.println("copylist size:" + copyList.size());
+        System.out.println("copy list size:" + copyList.size());
         service.shutdown();
     }
 
