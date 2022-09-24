@@ -43,4 +43,30 @@ public class TestNIO {
         fileChannel.close();
         inputStream.close();
     }
+
+    @Test
+    public void test3() throws IOException {
+        FileInputStream fis = new FileInputStream("basic.txt");
+        FileOutputStream fos = new FileOutputStream("basic2.txt");
+        byte[] b = new byte[1024];
+        int len = 0;
+        while ((len = fis.read(b)) != -1) {
+            fos.write(b, 0, len);
+        }
+
+        fis.close();
+        fos.close();
+    }
+
+
+    @Test
+    public void test4() throws IOException {
+        FileInputStream fis = new FileInputStream("basic2.txt");
+        FileOutputStream fos = new FileOutputStream("basic3.txt");
+        FileChannel s = fis.getChannel();
+        FileChannel d = fos.getChannel();
+        d.transferFrom(s, 0, s.size());
+        fis.close();
+        fos.close();
+    }
 }
