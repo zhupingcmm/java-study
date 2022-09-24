@@ -21,6 +21,9 @@
         <jol.version>0.9</jol.version>
         <cglib.version>3.3.0</cglib.version>
         <mysql.driver.version>8.0.28</mysql.driver.version>
+        <netty.version>4.1.51.Final</netty.version>
+        <protobuf.version>3.6.1</protobuf.version>
+        <junit.version>4.13</junit.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -38,6 +41,23 @@
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.driver.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${netty.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.protobuf</groupId>
+                <artifactId>protobuf-java</artifactId>
+                <version>${protobuf.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
