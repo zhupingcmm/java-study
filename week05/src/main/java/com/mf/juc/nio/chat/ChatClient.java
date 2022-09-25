@@ -6,7 +6,7 @@ import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
 
 public class ChatClient {
-    private final String HOST = "localhost";
+    private final String HOST = "121.199.163.228";
     private int PORT = 9999;
     private SocketChannel socketChannel;
     private String userName;
